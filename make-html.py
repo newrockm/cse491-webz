@@ -22,6 +22,10 @@ print >>fp, "Hello, world.<p><a href='link.html'>this is a relative link</a>"
 print >>fp, """
 <p>
 <a href='subdir/table.html'>Here is a link</a> to a file in subdir/:
+</p>
+
+<p>
+<a href="Check out the catastrophe!">catastrophe.html</a>
 """
 
 fp.close()
@@ -53,6 +57,8 @@ A table:
  </tr>
  <tr><td colspan=1>Note, you can nest <a href='table.html'>things like links</a> in tables</td></tr>
 </table>
+
+<a href="Home">../index.html</a>
 """
 
 fp.close()
@@ -62,5 +68,66 @@ fp.close()
 fp = open('html/catastrophe.html', 'w')
 
 print >>fp, """
-<tr><td> <h3>This <width="25%" align="left"></td></tr><tr><td> <h3>is <width="25%" align="left"></td></tr><tr><td> <h3>an <width="25%" align="left"></td></tr><tr><td> <h3>ascending <width="25%" align="left"></td></tr><tr><td> <h3>catastrophe <width="25%" align="left"></td></tr><tr><td> <h3>QUICK! <width="25%" align="left"></td></tr><tr><td> <h3>close <width="25%" align="left"></td></tr><tr><td> <h3>the <width="25%" align="left"></td></tr><tr><td> <h3>h3 <width="25%" align="left"></td></tr><tr><td> <h3>tags! <width="25%" align="left"></td></tr>
+<tr>
+<td>
+<h3>This <width="25%" align="left"></h3>
+</td>
+</tr>
+<tr>
+<td>
+<h3>is <width="25%" align="left"></h3>
+</td>
+</tr>
+<tr>
+<td>
+<h3>an <width="25%" align="left"></h3>
+</td>
+</tr>
+<tr>
+<td>
+<h3>ascending <width="25%" align="left"></h3>
+</td>
+</tr>
+<tr>
+<td>
+<h3>catastrophe <width="25%" align="left"></h3>
+</td>
+</tr>
+<tr>
+<td>
+<h3>QUICK! <width="25%" align="left"></h3>
+</td>
+</tr>
+<tr>
+<td>
+<h3>close <width="25%" align="left"></h3>
+</td>
+</tr>
+<tr>
+<td>
+<h3>the <width="25%" align="left"></h3>
+</td>
+</tr>
+<tr>
+<td>
+<h3>h3 <width="25%" align="left"></h3>
+</td>
+</tr>
+<tr>
+<td>
+<h3>tags! <width="25%" align="left"></h3>
+</td>
+</tr>
 """
+
+fp.close()
+
+### new link.html
+
+fp = open('html/link.html', 'w')
+
+print >>fp, "<b>Hello, world</b>"
+
+fp.close()
+
+
