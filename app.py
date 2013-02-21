@@ -26,6 +26,9 @@ Visit:
         elif path == '/helmet':
             content_type = 'image/gif'
             data = open('Spartan-helmet-Black-150-pxls.gif', 'rb').read()
+        elif os.path.exists('html/' + environ['PATH_INFO']):
+            content_type = 'text/html'
+            data = open('html/' + environ['PATH_INFO']).read();
         else:
             content_type = 'text/plain'
             data = "Hello, world; got path request %s" % environ['PATH_INFO']
@@ -36,7 +39,7 @@ Visit:
         return [data]
 
 if __name__ == '__main__':
-    import random, socket
+    import random, socket, os
     port = random.randint(8000, 9999)
     
     app = SimpleApp()

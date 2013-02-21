@@ -25,7 +25,7 @@ print >>fp, """
 </p>
 
 <p>
-<a href="Check out the catastrophe!">catastrophe.html</a>
+<a href="catastrophe.html">Check out the catastrophe!</a>
 """
 
 fp.close()
@@ -58,7 +58,7 @@ A table:
  <tr><td colspan=1>Note, you can nest <a href='table.html'>things like links</a> in tables</td></tr>
 </table>
 
-<a href="Home">../index.html</a>
+<a href="../index.html">Home</a>
 """
 
 fp.close()
