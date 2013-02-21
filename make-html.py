@@ -26,6 +26,11 @@ print >>fp, """
 
 <p>
 <a href="catastrophe.html">Check out the catastrophe!</a>
+</p>
+
+<p>
+<a href="../">Return to main page</a>
+</p>
 """
 
 fp.close()

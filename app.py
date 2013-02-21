@@ -13,6 +13,7 @@ class SimpleApp(object):
             data = """\
 Visit:
 <a href='content'>a file</a>,
+<a href='html/index.html'>another set of files</a>
 <a href='error'>an error</a>,
 <a href='helmet'>an image</a>,
 <a href='somethingelse'>something else</a>, or
@@ -42,9 +43,9 @@ Visit:
 
             content_type = 'text/html'
             data = "First name: %s; last name: %s.  <a href='./'>return to index</a>" % (firstname, lastname)
-        elif os.path.exists('html/' + environ['PATH_INFO']):
+        elif path.startswith('/html') and os.path.exists('html/' + os.path.basename(environ['PATH_INFO'])):
             content_type = 'text/html'
-            data = open('html/' + environ['PATH_INFO']).read();
+            data = open('html/' + os.path.basename(environ['PATH_INFO'])).read();
         else:
             content_type = 'text/plain'
             data = "Hello, world; got path request %s" % environ['PATH_INFO']
